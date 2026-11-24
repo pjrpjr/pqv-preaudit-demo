@@ -600,7 +600,7 @@
             totals.recoverableStandardM01 = +(totals.recoverableStandardM01 + netOpen).toFixed(2);
             reason =
               ageBucket === "CRITICAL_RESCUE"
-                ? "URGENT M-02 RESCUE: File Traditional Dispute immediately (" + daysRemaining + "d left before 730d cliff)."
+                ? "URGENT <90d RESCUE: File Traditional Dispute immediately (" + daysRemaining + "d left before 730d cliff)."
                 : "SIGNED_STAMPED POD + ASN + PO matched. Ready for <=10MB self-upload packet.";
           }
         } else {
@@ -661,7 +661,7 @@
     $("kpi-critical-count").textContent =
       t.criticalHardPodCount + " Hard-POD POs <90d (" + formatUSD(t.criticalRescueOpen, 0) + " total open <90d)";
     $("kpi-recoverable").textContent = formatUSD(t.recoverableHardPod, 0);
-    $("kpi-recoverable-count").textContent = t.recoverableCount + " verified Hard-POD POs (M-01 + M-03)";
+    $("kpi-recoverable-count").textContent = t.recoverableCount + " verified Hard-POD POs (Standard + Re-Dispute)";
 
     $("rec-gross").textContent = formatUSD(t.gross, 2);
     $("rec-scr").textContent = "-" + formatUSD(t.scrReversed, 2);
@@ -730,9 +730,9 @@
   }
 
   function badgeForClassification(cls) {
-    if (cls === "CRITICAL_RESCUE_HARD_POD") return '<span class="status-chip chip-critical">&lt;90d CRITICAL RESCUE</span>';
+    if (cls === "CRITICAL_RESCUE_HARD_POD") return '<span class="status-chip chip-critical">&lt;90d CUTOFF RESCUE</span>';
     if (cls === "RECOVERABLE_HARD_POD") return '<span class="status-chip chip-recoverable">RECOVERABLE HARD-POD</span>';
-    if (cls === "M-03_REDISPUTE_SOI_RISK") return '<span class="status-chip chip-weak">M-03 RE-DISPUTE / SOI</span>';
+    if (cls === "M-03_REDISPUTE_SOI_RISK") return '<span class="status-chip chip-weak">SOI-RISK RE-DISPUTE</span>';
     if (cls === "WEAK_EVIDENCE_EXCLUDED") return '<span class="status-chip chip-weak">WEAK / STRIPPED</span>';
     if (cls === "SCR_REVERSED_CLOSED") return '<span class="status-chip chip-scr">-SCR REVERSED</span>';
     if (cls === "INITIAL_LOCKOUT_WAIT") return '<span class="status-chip chip-muted">0-40d LOCKOUT</span>';
@@ -904,7 +904,7 @@
       ["Gross PQV Shortages (" + t.grossCount + " rows)", formatUSD(t.gross, 2), false],
       ["Less: Amazon -SCR Auto-Reversal Credits (" + t.scrCount + " rows)", "-" + formatUSD(t.scrReversed, 2), false],
       ["Net Open PQV Balance", formatUSD(t.netOpen, 2), true],
-      ["Verified Recoverable Hard-POD (M-01 + M-03)", formatUSD(t.recoverableHardPod, 2) + " (" + t.recoverableCount + " POs)", true],
+      ["Verified Recoverable Hard-POD (Standard + Re-Dispute)", formatUSD(t.recoverableHardPod, 2) + " (" + t.recoverableCount + " POs)", true],
       ["  - Urgent Hard-POD Rescue (<90d Before 730d Cutoff)", formatUSD(t.criticalRescueHardPod, 2) + " (" + t.criticalHardPodCount + " POs)", false],
       ["Stripped Before Charging: Weak / No-POD / Missing ASN", formatUSD(t.weakExcluded, 2) + " (" + t.weakCount + " POs)", false],
       ["Initial Lockout (0-40d) + Expired (>730d)", formatUSD(t.initialLockout + t.expired, 2), false]
@@ -1238,14 +1238,36 @@
       $(id).addEventListener("input", updateReservationBrief);
     });
 
+    function fallbackCopyText(text) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      } catch (_) {
+        // ignore if execCommand is unavailable
+      }
+      $("copy-feedback").hidden = false;
+    }
+
     $("copy-brief-btn").addEventListener("click", function () {
       var brief = buildReservationBriefText();
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(brief).then(function () {
-          $("copy-feedback").hidden = false;
-        });
+        navigator.clipboard
+          .writeText(brief)
+          .then(function () {
+            $("copy-feedback").hidden = false;
+          })
+          .catch(function () {
+            fallbackCopyText(brief);
+          });
       } else {
-        $("copy-feedback").hidden = false;
+        fallbackCopyText(brief);
       }
     });
 
