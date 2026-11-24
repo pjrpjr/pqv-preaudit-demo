@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PQV Pre-Audit Desk — 15-Second Zero-Password Amazon 1P Shortage Pre-Audit ($1,195 Flat Fee)</title>
+  <meta name="description" content="100% browser-local Amazon 1P Vendor Central PQV pre-audit. Strip weak no-POD claims, net -SCR reversals, flag items expiring before Amazon's 730-day cutoff, and generate self-upload <=10MB evidence packs for a $1,195 flat fee (0% contingency)." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOP MANDATORY SOI PERMANENT WAIVER WARNING BANNER (ABOVE THE FOLD) -->
+  <div class="soi-top-banner" role="alert">
+    <div class="container soi-banner-inner">
+      <span class="soi-badge">CRITICAL AMAZON 1P LEGAL WARNING</span>
+      <p class="soi-banner-text">
+        <strong>Accepting an Amazon Vendor Central Statement of Open Items (SOI) bulk settlement permanently waives your right to dispute or recover all other open items in that time period.</strong>
+        Audit every open PQV deduction and expiring 730-day window before clicking accept.
+      </p>
+    </div>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">PQV</div>
+        <div>
+          <div class="brand-name">PQV Pre-Audit Desk</div>
+          <div class="brand-sub">Independent Amazon 1P Deduction Documentation Tool</div>
+        </div>
+      </div>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#engine">15s Pre-Audit Engine</a>
+        <a href="#pricing">Flat-Fee Math</a>
+        <a href="#how-it-works">Self-Upload Workflow</a>
+        <a href="#reserve" class="btn btn-sm btn-primary">Reserve Audit Slot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="trust-pills">
+            <span class="pill pill-emerald">100% In-Browser CSV Parsing</span>
+            <span class="pill pill-slate">Zero Vendor Central Password</span>
+            <span class="pill pill-slate">Zero SP-API Login</span>
+            <span class="pill pill-slate">0% Contingency Fee</span>
+          </div>
+          <h1>Stop Paying 25% Contingency to Chase Unwinnable 1P Shortages.</h1>
+          <p class="hero-lead">
+            Run a <strong>15-second zero-password pre-audit</strong> directly inside your browser tab.
+            We net out <code>-SCR</code> auto-repayments, strip unprovable No-POD items before you pay a dollar,
+            flag Hard-POD deductions approaching Amazon's <strong>730-day hard cutoff</strong>, and package
+            self-upload &le;10MB evidence PDFs for a flat <strong>$1,195</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" id="hero-demo-btn" class="btn btn-primary btn-lg">
+              Run Instant Demo (Redacted $184K Sample)
+            </button>
+            <a href="#engine" class="btn btn-secondary btn-lg">
+              Test Your Own CSVs Locally
+            </a>
+          </div>
+
+          <div class="pledge-box">
+            <div class="pledge-title">Zero-Access Privacy &amp; Compliance Pledge</div>
+            <ul class="pledge-list">
+              <li><strong>Zero Backend Upload:</strong> Remittance and 3PL BOL/POD CSVs are parsed 100% locally in browser memory. Nothing is transmitted to any server.</li>
+              <li><strong>Zero Portal Access:</strong> We never ask for Vendor Central passwords, user invites, or SP-API credentials.</li>
+              <li><strong>Client Self-Upload Only:</strong> We never file disputes on your behalf. Your team self-uploads our &le;10MB PDFs and summary sheet in ~35 minutes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Fee comparison summary">
+          <div class="card-kicker">WHY CFOs SWITCH FROM 25% AGENCIES</div>
+          <h2 class="card-heading">Per-$100,000 Recovered Comparison</h2>
+          <div class="compare-rows">
+            <div class="compare-row compare-highlight">
+              <div>
+                <div class="compare-name">PQV Pre-Audit Desk</div>
+                <div class="compare-note">Pre-screened Hard-POD Pack &middot; 0% contingency</div>
+              </div>
+              <div class="compare-cost text-emerald">$1,195 flat</div>
+            </div>
+            <div class="compare-row">
+              <div>
+                <div class="compare-name">ChargeGuard (Typical Agency)</div>
+                <div class="compare-note">25% on first $250k recovered (15% above)</div>
+              </div>
+              <div class="compare-cost text-red">$25,000</div>
+            </div>
+            <div class="compare-row">
+              <div>
+                <div class="compare-name">Reason Automation BASIS</div>
+                <div class="compare-note">Enterprise SaaS subscription ($1,249/mo &times; 12)</div>
+              </div>
+              <div class="compare-cost text-muted">$14,988/yr</div>
+            </div>
+          </div>
+          <div class="compare-foot">
+            <strong>$23,805 saved</strong> vs. 25% contingency on a $100K recovery batch &mdash; before counting weak No-POD claims stripped upfront.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 15-SECOND PRE-AUDIT ENGINE -->
+    <section id="engine" class="engine-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">100% CLIENT-SIDE ENGINE &middot; ZERO DATA LEAVES THIS TAB</div>
+            <h2>15-Second Zero-Password PQV Pre-Audit Engine</h2>
+            <p class="section-sub">
+              Load your Amazon Vendor Central Remittance/Shortage CSV and 3PL BOL/POD Index CSV, or run our redacted $184K sample dataset in one click.
+            </p>
+          </div>
+          <div class="engine-top-buttons">
+            <button type="button" id="run-demo-btn" class="btn btn-primary">
+              Run Instant Demo (Redacted $184K Sample)
+            </button>
+            <button type="button" id="download-sample-csvs-btn" class="btn btn-secondary">
+              Download Redacted Sample CSVs
+            </button>
+          </div>
+        </div>
+
+        <!-- UPLOAD & OPTIONS BAR -->
+        <div class="upload-panel">
+          <div class="upload-grid">
+            <label class="dropzone" for="remittance-file" id="remittance-dropzone">
+              <input type="file" id="remittance-file" accept=".csv,text/csv" />
+              <div class="dropzone-label">1. Vendor Central Remittance / Shortage CSV</div>
+              <div class="dropzone-meta" id="remittance-status">
+                Drop CSV or click to browse &middot; Columns: Invoice/Deduction ID, PO Number, Date, Amount, Type
+              </div>
+            </label>
+
+            <label class="dropzone" for="pod-file" id="pod-dropzone">
+              <input type="file" id="pod-file" accept=".csv,text/csv" />
+              <div class="dropzone-label">2. 3PL BOL / Signed POD Index CSV</div>
+              <div class="dropzone-meta" id="pod-status">
+                Drop CSV or click to browse &middot; Columns: PO Number, BOL, ASN, Delivery Date, POD Status, Filename
+              </div>
+            </label>
+
+            <div class="audit-controls">
+              <label class="control-label" for="audit-date-input">Reference Audit Date</label>
+              <input type="date" id="audit-date-input" class="date-input" />
+              <button type="button" id="run-uploaded-btn" class="btn btn-dark" disabled>
+                Run Local Pre-Audit
+              </button>
+              <div class="local-badge">
+                <span class="dot-green"></span> Processed locally in JS memory
+              </div>
+            </div>
+          </div>
+          <div id="engine-error" class="engine-error" hidden></div>
+        </div>
+
+        <!-- RESULTS DASHBOARD -->
+        <div id="results-panel" class="results-panel">
+          <div class="results-header">
+            <div>
+              <span class="dataset-tag" id="dataset-badge">No audit run yet &mdash; click "Run Instant Demo" above</span>
+              <h3 id="results-title">Pre-Audit Breakdown &amp; 730-Day Cutoff Countdown</h3>
+            </div>
+            <div class="results-export-actions">
+              <button type="button" id="download-cfo-pdf-btn" class="btn btn-primary" disabled>
+                Download 1-Page CFO Loss Countdown Memo (PDF)
+              </button>
+              <a href="samples/sample_dispute_pack.zip" id="download-zip-link" class="btn btn-secondary" download="sample_dispute_pack.zip">
+                Download Sample Dispute Pack (.zip)
+              </a>
+              <a href="samples/CFO_PQV_Loss_Countdown_Memo.pdf" id="download-sample-memo-link" class="btn btn-secondary" download="CFO_PQV_Loss_Countdown_Memo.pdf">
+                Sample Engine Memo (.pdf)
+              </a>
+            </div>
+          </div>
+
+          <!-- TOP KPI CARDS -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Gross PQV Shortages</div>
+              <div class="kpi-value" id="kpi-gross">$0</div>
+              <div class="kpi-sub" id="kpi-gross-count">0 raw shortage rows</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">-SCR Auto-Reversals Netted</div>
+              <div class="kpi-value text-slate" id="kpi-scr">-$0</div>
+              <div class="kpi-sub" id="kpi-scr-count">0 credit reversals stripped</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Weak / No-POD Stripped</div>
+              <div class="kpi-value text-amber" id="kpi-excluded">$0</div>
+              <div class="kpi-sub" id="kpi-excluded-count">Excluded before charging you</div>
+            </div>
+            <div class="kpi-card kpi-card-danger">
+              <div class="kpi-label">Expiring &lt;90d (730d Cliff)</div>
+              <div class="kpi-value text-red" id="kpi-critical">$0</div>
+              <div class="kpi-sub" id="kpi-critical-count">Immediate rescue priority</div>
+            </div>
+            <div class="kpi-card kpi-card-emerald">
+              <div class="kpi-label">Net Recoverable Hard-POD</div>
+              <div class="kpi-value text-emerald" id="kpi-recoverable">$0</div>
+              <div class="kpi-sub" id="kpi-recoverable-count">SIGNED_STAMPED + ASN + PO match</div>
+            </div>
+          </div>
+
+          <!-- ACCOUNTING RECONCILIATION & ROI STRIP -->
+          <div class="reconcile-grid">
+            <div class="reconcile-card">
+              <h4>Exact Accounting Reconciliation</h4>
+              <table class="mini-table">
+                <tbody>
+                  <tr>
+                    <td>Gross PQV Shortages</td>
+                    <td class="num" id="rec-gross">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Less: <code>-SCR</code> Reversal Credits</td>
+                    <td class="num" id="rec-scr">-$0.00</td>
+                  </tr>
+                  <tr class="row-total">
+                    <td><strong>Net Open PQV Balance</strong></td>
+                    <td class="num" id="rec-net"><strong>$0.00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Recoverable Hard-POD &mdash; Standard (M-01)</td>
+                    <td class="num text-emerald" id="rec-rec">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Recoverable Hard-POD &mdash; Re-Dispute / SOI Risk (M-03)</td>
+                    <td class="num text-amber" id="rec-redispute">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Weak Evidence Excluded (No Stamp / Unsigned / Missing)</td>
+                    <td class="num text-amber" id="rec-weak">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Initial Lockout (0&ndash;40d Reconciliation Window)</td>
+                    <td class="num" id="rec-lockout">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Expired (&gt;730d Amazon Hard Cutoff)</td>
+                    <td class="num text-muted" id="rec-expired">$0.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="identity-check" id="identity-check-msg">
+                Accounting check: pending run
+              </div>
+            </div>
+
+            <div class="reconcile-card">
+              <h4>Batch Fee &amp; ROI Comparison (On Net Recoverable)</h4>
+              <table class="mini-table">
+                <tbody>
+                  <tr>
+                    <td>PQV Pre-Audit Desk (Flat Fee, 0% Contingency)</td>
+                    <td class="num text-emerald"><strong>$1,195.00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>ChargeGuard Equivalent (25% up to $250K, 15% over)</td>
+                    <td class="num text-red" id="roi-chargeguard">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Reason Automation BASIS (Annual SaaS Plan)</td>
+                    <td class="num">$14,988.00/yr</td>
+                  </tr>
+                  <tr class="row-total">
+                    <td><strong>Immediate Fee Savings vs. 25% Agency</strong></td>
+                    <td class="num text-emerald" id="roi-savings"><strong>$0.00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Effective Net Yield to Your Brand</td>
+                    <td class="num" id="roi-yield">0.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="soi-inline-box">
+                <strong>SOI Waiver Alert:</strong> Never accept a Vendor Central Statement of Open Items bulk settlement until the <span id="soi-at-risk-inline">$0</span> in verified Hard-POD claims is filed or formally settled.
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEMIZED PRE-AUDIT TABLE -->
+          <div class="table-card">
+            <div class="table-toolbar">
+              <h4>Itemized Pre-Audit Ledger</h4>
+              <div class="filter-tabs" role="tablist" aria-label="Filter audit rows">
+                <button type="button" class="tab-btn active" data-filter="ALL">All (<span id="cnt-all">0</span>)</button>
+                <button type="button" class="tab-btn" data-filter="CRITICAL_RESCUE">&lt;90d Rescue (<span id="cnt-crit">0</span>)</button>
+                <button type="button" class="tab-btn" data-filter="RECOVERABLE_HARD_POD">Hard-POD (<span id="cnt-rec">0</span>)</button>
+                <button type="button" class="tab-btn" data-filter="WEAK_EVIDENCE_EXCLUDED">Weak Excluded (<span id="cnt-weak">0</span>)</button>
+                <button type="button" class="tab-btn" data-filter="SCR_REVERSED">-SCR Reversed (<span id="cnt-scr">0</span>)</button>
+                <button type="button" class="tab-btn" data-filter="OTHER">Lockout / Expired / SOI Risk (<span id="cnt-other">0</span>)</button>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Invoice / Deduction</th>
+                    <th>PO Number</th>
+                    <th>Deduction Date</th>
+                    <th>Age / Days Left (730d)</th>
+                    <th class="num">Amount</th>
+                    <th>POD &amp; ASN Evidence</th>
+                    <th>Classification</th>
+                    <th>Reason / Action</th>
+                  </tr>
+                </thead>
+                <tbody id="audit-table-body">
+                  <tr>
+                    <td colspan="8" class="empty-cell">Click "Run Instant Demo (Redacted $184K Sample)" or load your CSVs to inspect line-by-line pre-audit classifications.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS / SELF-UPLOAD WORKFLOW -->
+    <section id="how-it-works" class="workflow-section">
+      <div class="container">
+        <div class="section-kicker">ZERO PASSWORD &middot; ZERO SP-API &middot; ZERO COLLECTION AGENCY RISK</div>
+        <h2>How the $1,195 Flat-Fee Self-Upload Workflow Works</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h3>15-Second Local Pre-Screen</h3>
+            <p>
+              Export your Vendor Central Remittance CSV and 3PL BOL/POD Index CSV. Run our pre-audit locally in your browser to net <code>-SCR</code> credits, strip unwinnable No-POD items, and quantify your &lt;90-day expiring rescue queue.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h3>Hard-POD Evidence Assembly</h3>
+            <p>
+              If your verified Hard-POD batch justifies the $1,195 flat fee, reserve a pack build slot. We assemble standardized, Amazon-compliant &le;10MB dispute PDFs pairing each PO shortage with stamped POD, BOL, and ASN proof.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h3>~35-Min Self-Upload &amp; SOI Guard</h3>
+            <p>
+              Your AR/Finance team keeps full control and uploads the ready packets directly in Vendor Central using our <code>01_Vendor_Central_Upload_Summary.csv</code> guide &mdash; without sharing passwords or accepting a premature SOI waiver.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING & HARD RULES -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="section-kicker">TRANSPARENT COMMERCIAL TERMS</div>
+        <h2>One Flat Fee. Zero Contingency. Full Redline Protection.</h2>
+        <div class="pricing-grid">
+          <div class="price-box price-box-main">
+            <div class="price-badge">STANDARD BATCH PACK</div>
+            <div class="price-amount">$1,195 <span>flat / batch</span></div>
+            <p class="price-desc">0% contingency fee on recovered funds. You keep 100% of every dollar Amazon repays.</p>
+            <ul class="check-list">
+              <li>Pre-payment Hard-POD Gate strips unprovable items upfront</li>
+              <li><code>-SCR</code> auto-reversal detection prevents double-disputing</li>
+              <li>730-day hard deadline &amp; 35&ndash;40d initial lockout bucketing</li>
+              <li>Per-PO &le;10MB PDF evidence packets + upload summary CSV</li>
+              <li>Page-1 Statement of Open Items (SOI) permanent waiver guardrails</li>
+            </ul>
+          </div>
+          <div class="price-box">
+            <div class="price-badge badge-slate">HARD LEGAL &amp; SECURITY BOUNDARIES</div>
+            <h3>What We Never Do</h3>
+            <ul class="cross-list">
+              <li><strong>Never</strong> take a percentage contingency cut (0% vs 15%&ndash;25% agencies)</li>
+              <li><strong>Never</strong> ask for your Vendor Central username, password, or 2FA</li>
+              <li><strong>Never</strong> request SP-API keys or third-party portal delegation</li>
+              <li><strong>Never</strong> file disputes or negotiate settlements on your behalf</li>
+              <li><strong>Never</strong> upload your raw CSVs to an external cloud server in pre-audit</li>
+            </ul>
+            <div class="soi-warning-card">
+              <strong>SOI Permanent Waiver Reminder:</strong> Accepting an Amazon Vendor Central Statement of Open Items (SOI) bulk settlement permanently waives your right to dispute or recover all other open items in that time period.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HONEST PRE-AUDIT SLOT RESERVATION FORM -->
+    <section id="reserve" class="reserve-section">
+      <div class="container reserve-grid">
+        <div class="reserve-info">
+          <div class="section-kicker">RESERVE A $1,195 FLAT-FEE PACK SLOT</div>
+          <h2>Generate Your Pre-Audit Reservation Brief</h2>
+          <p>
+            No fake payment gateway and no automated portal scraping. Fill in your brand details below to generate a pre-filled reservation brief with your computed Hard-POD recoverable total and &lt;90-day expiring amount.
+          </p>
+          <div class="inbox-pill-box" id="desk-inbox-box">
+            <span class="inbox-label">Reply-To Channel:</span>
+            <span id="desk-inbox-display">Isolated custom reply-to domain finalizing &mdash; copy or download your pre-audit summary below, or reply directly to our outreach email.</span>
+          </div>
+          <p class="reserve-note">
+            Notice: Your numbers below auto-populate from the local pre-audit you just ran in your browser. Never include Vendor Central passwords or SP-API credentials.
+          </p>
+        </div>
+
+        <form id="reservation-form" class="reserve-form">
+          <div class="form-row">
+            <label for="res-brand">Brand / Company Name</label>
+            <input type="text" id="res-brand" placeholder="e.g., Ridgeway Home Goods" required />
+          </div>
+          <div class="form-row two-col">
+            <div>
+              <label for="res-email">Finance / Controller Email</label>
+              <input type="email" id="res-email" placeholder="controller@brand.com" required />
+            </div>
+            <div>
+              <label for="res-volume">Monthly 1P PO Volume (Optional)</label>
+              <input type="text" id="res-volume" placeholder="e.g., $450K / mo" />
+            </div>
+          </div>
+          <div class="form-row two-col">
+            <div>
+              <label for="res-recoverable">Verified Hard-POD Recoverable ($)</label>
+              <input type="text" id="res-recoverable" value="$0" />
+            </div>
+            <div>
+              <label for="res-expiring">Expiring &lt;90d Rescue Amount ($)</label>
+              <input type="text" id="res-expiring" value="$0" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="res-notes">Notes / Target Timeline</label>
+            <textarea id="res-notes" rows="2" placeholder="Optional: e.g., pending SOI offer deadline or Q3 shortage batch"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="copy-brief-btn" class="btn btn-primary">
+              Copy Reservation Brief
+            </button>
+            <button type="button" id="download-brief-json-btn" class="btn btn-secondary">
+              Download Reservation Brief (.json)
+            </button>
+            <a id="mailto-reserve-btn" href="#" class="btn btn-secondary" hidden>
+              Open Pre-Filled Reservation Email
+            </a>
+          </div>
+          <div id="copy-feedback" class="copy-feedback" hidden>
+            Reservation brief copied to clipboard. Paste it into your reply to our outreach email (or save the JSON file).
+          </div>
+          <pre id="brief-preview" class="brief-preview"></pre>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>PQV Pre-Audit Desk</strong> &mdash; Independent Amazon 1P deduction documentation tool. Not a law firm, CPA firm, or licensed collection agency.
+      </div>
+      <div class="footer-meta">
+        100% Client-Side Pre-Audit &middot; $1,195 Flat Fee (0% Contingency) &middot; Zero Passwords / Zero SP-API &middot; Client Self-Upload Only
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
