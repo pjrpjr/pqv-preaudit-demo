@@ -405,8 +405,8 @@
             No fake payment gateway and no automated portal scraping. Fill in your brand details below to generate a pre-filled reservation brief with your computed Hard-POD recoverable total and &lt;90-day expiring amount.
           </p>
           <div class="inbox-pill-box" id="desk-inbox-box">
-            <span class="inbox-label">Reply-To Channel:</span>
-            <span id="desk-inbox-display">Isolated custom reply-to domain finalizing &mdash; copy or download your pre-audit summary below, or reply directly to our outreach email.</span>
+            <span class="inbox-label">Dedicated Pre-Audit Desk Inbox:</span>
+            <span id="desk-inbox-display"><code>audit@pqv.far31prescan.com</code></span>
           </div>
           <p class="reserve-note">
             Notice: Your numbers below auto-populate from the local pre-audit you just ran in your browser. Never include Vendor Central passwords or SP-API credentials.
@@ -444,18 +444,18 @@
           </div>
 
           <div class="form-actions">
-            <button type="button" id="copy-brief-btn" class="btn btn-primary">
+            <a id="mailto-reserve-btn" href="mailto:audit@pqv.far31prescan.com" class="btn btn-primary">
+              Open Pre-Filled Reservation Email
+            </a>
+            <button type="button" id="copy-brief-btn" class="btn btn-secondary">
               Copy Reservation Brief
             </button>
             <button type="button" id="download-brief-json-btn" class="btn btn-secondary">
               Download Reservation Brief (.json)
             </button>
-            <a id="mailto-reserve-btn" href="#" class="btn btn-secondary" hidden>
-              Open Pre-Filled Reservation Email
-            </a>
           </div>
           <div id="copy-feedback" class="copy-feedback" hidden>
-            Reservation brief copied to clipboard. Paste it into your reply to our outreach email (or save the JSON file).
+            Reservation brief copied to clipboard. Email it to <code>audit@pqv.far31prescan.com</code> or click "Open Pre-Filled Reservation Email".
           </div>
           <pre id="brief-preview" class="brief-preview"></pre>
         </form>

@@ -1,10 +1,9 @@
 (function () {
   "use strict";
 
-  // Configurable reply-to email (defaults to empty string until isolated custom domain is finalized;
-  // supports ?reply=<email> query param override)
+  // Isolated custom domain reply-to inbox (supports ?reply=<email> query param override)
   var CONFIG = {
-    RESERVATION_EMAIL: "",
+    RESERVATION_EMAIL: "audit@pqv.far31prescan.com",
     FLAT_FEE: 1195,
     BASIS_ANNUAL: 14988,
     HARD_DEADLINE_DAYS: 730,
@@ -1095,7 +1094,7 @@
       mailtoBtn.hidden = false;
     } else {
       $("desk-inbox-display").textContent =
-        "Isolated custom reply-to domain finalizing — copy or download your pre-audit summary below, or reply directly to our outreach email.";
+        "Copy or download your pre-audit summary below, or reply directly to our outreach email.";
       mailtoBtn.hidden = true;
       mailtoBtn.href = "#";
     }
